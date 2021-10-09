@@ -15,6 +15,6 @@ jangan lupa tambahkan hasil screenshoot web di dalam file
 
 ### Tambahkan identitas dasar di sini: 
 
-Nama  :
+Nama  : Sayyid Muhammad Umar Al Haris
 <br>
-NIM   :
+NIM   : 119140190

@@ -21,13 +21,14 @@ nav{
     box-shadow: 0 5px #9d188b;
 }
 
-img{
+img{    
     height: 200px;
 }
 
 body{
     height: auto;
     width: auto;
+    background-color: #ffd6d6;
 }
 
 .all-contents{
@@ -40,7 +41,7 @@ body{
     height: 373px;
     width: 56%;
     display: flex;
-    margin-top: 30px;
+    margin-top: 95px;
 }
 
 .newss{
@@ -62,6 +63,7 @@ footer{
     justify-content: center;
     box-shadow: 0 0 10px #9d188b;
     font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .berita1{
@@ -77,10 +79,11 @@ td{
 #bioTitle{
     padding-left: 25px;
     font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 img{
-    margin-left: 15px;
+    margin-left: 45px;
     border-radius: 30%;
 }
 
@@ -89,7 +92,7 @@ img{
 }
 
 #logoitera{
-    margin: 5px;
+    margin: 12px;
     border-radius: 30%;
     height: 80%;
     margin-right: 15px;
@@ -117,5 +120,11 @@ p{
 
 .link-more{
     font-size: 16px;
-    color:black
+    color:#9d188b
+}
+
+b{
+    font-size: 24px;
+    padding-left: 6px;
+    font-family: Georgia, serif;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Pemweb RC Minggu 3 | 119140190 </title>
+    <script src="base.js"></script>
+</head>
+<body class=warna>
+    <p>
+        Select theme: 
+        <select onchange="gantiWarna(value)">
+            <option value="default">White</option>
+            <option value="pink">Pink</option>
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+        </select>
+    </p>
+
+    <h1>This is my website</h1>
+    
+    <p>
+        Select the weather type today: 
+        <select onchange="gantiWeather(value)">
+            <option value="sunny">Sunny</option>
+            <option value="rain">Rain</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="thunderstorm">Thunderstorm</option>
+            <option value="snow">Snow</option>
+        </select>
+    </p>
+    <p id="weather">It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.</p>
+    
+    <p>
+        Input number : 
+        <input id="angka" type="number">
+        <input type="button" onclick="factorial()" value="Get Factorial">
+    </p>
+    <p id="hasil">
+
+    </p> 
+</body>
+</html>

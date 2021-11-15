@@ -100,7 +100,7 @@
                                 
                                 let totalHargaSemua = banyakMangga + banyakJambu + banyakSalak;
 
-                                isinya = "<p> Banyak mangga yang dibeli : " + totalHargaSemua + "</p>";
+                                isinya = "<p> TOTAL HARGA KESELURUHAN : " + totalHargaSemua + "</p>";
 
                                 var isiPrint = document.getElementByID("nantiDiisi");
                                 isiPrint.innerHTML = isinya;

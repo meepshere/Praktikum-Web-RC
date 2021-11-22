@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktikum 4 | 119140190</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+    <header>
+        <img src="itera.png" id="logoitera">
+        <b>
+            Institut Teknologi Sumatera
+        </b>
+    </header>
+    
+    <nav>
+        <div class="link">
+            <li><a href="">Home</a></li>
+            <li><a href="https://github.com/meepshere/Praktikum-Web-RC/">GitHub</a></li>
+            <li><a href="https://instagram.com/mipudip">Insta</a></li>
+        </div>
+    </nav>
+
+
+    <div id="alert_message" style="text-align: center;"></div>
+    
+    <div class="all-contents">
+        
+        <div class="main-content">
+            <button id="newdata" class="button">New Data <br> (tugas CRUD) </button>
+
+            <div id="tampil_data"></div>
+        </div>
+
+        <div class="newss">
+            <div id="tampil_pilihan"></div> 
+        </div>
+
+    </div>
+    
+    <footer> 
+        Sayyid Haris © 2021
+    </footer> 
+
+    <script>
+        var rIndex,
+        table = document.getElementById("table");
+        
+        $(document).ready(function(){
+            $('#tampil_data').load("show.php");
+
+            
+            $('#newdata').click(function(){
+                $.ajax({
+                    success : function(data){
+                        $('#tampil_data').load("show.php");
+                        $('#tampil_pilihan').load("form.php");
+                    }
+                })
+            })
+
+            $(document).on('click', '#btn-tampil', function(){
+                event.preventDefault();
+                var data = $('#form_mahasiswa').serialize();
+                $.ajax({
+                    type : 'POST',
+                    url : "add.php",
+                    data : data,
+                    cache : false,
+                    success : function(data){
+                        $('#tampil_data').load("show.php");
+                    }
+                })
+            })
+
+            $(document).on('click', '#btn-edit', function(){
+                event.preventDefault();
+                var data = $('#form_edit').serialize();
+                $.ajax({
+                    type : 'POST',
+                    url : "update.php",
+                    data : data,
+                    cache : false,
+                    success : function(data){
+                        $('#tampil_data').load("show.php");
+                    }
+                })
+            })
+
+                
+            $(document).on('click', '.delete', function(){
+                var id = $(this).attr("id");
+                if(confirm("Are you sure you want to remove this?"))
+                {
+                    $.ajax({
+                        url:"delete.php",
+                        method:"POST",
+                        data:{id:id},
+                        success:function(data){
+                        $('#alert_message').html('<div class="alert alert-success">'+data+'</div>');
+                        $('#tampil_data').load("show.php");
+                        }
+                    });
+                    setInterval(function(){
+                    $('#alert_message').html('');
+                    }, 5000);
+                }
+            });
+
+        })
+        function update(id){
+                event.preventDefault();
+                $.get("edit.php", {id},function(data) {
+                    $("#tampil_pilihan").html(data); 
+                });
+            }
+
+    </script>
+</body>
+</html>

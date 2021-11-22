@@ -20,9 +20,36 @@ nav{
     height: 37px; 
     box-shadow: 0 5px #9d188b;
 }
-
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 img{    
     height: 200px;
+}
+
+form {
+	align-items: center;
+    width: 240px;
+}
+
+#newdata{
+    margin-left: 120px;
+}
+
+#tampil_data{
+    margin-left: 20px;
+}
+
+.newss{
+    padding-top: 80px;
+    margin-left: 35px;
 }
 
 body{
@@ -39,14 +66,14 @@ body{
 
 .main-content{
     height: 373px;
-    width: 56%;
+    width: 73%;
     display: flex;
     margin-top: 95px;
 }
 
 .newss{
     height: auto;
-    width: 40%;
+    width: 28%;
     display: flex;
     margin-top: 30px;
 }
@@ -72,8 +99,16 @@ footer{
     text-justify: inter-word;
 }
 
+tabl
+
+thead{
+    text-align: center;
+    padding-left: 50px;
+    margin-left: 50px;
+}
+
 td{
-    padding-left: 25px;
+    padding-left: 35px;
 }
 
 #bioTitle{

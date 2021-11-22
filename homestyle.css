@@ -35,6 +35,20 @@ body{
     display:flex;
     height: auto;
     width: 100%;
+    align-items: center;
+}
+
+.absolute-center {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .main-content{
@@ -83,8 +97,7 @@ td{
 }
 
 img{
-    margin-left: 45px;
-    border-radius: 30%;
+    border-radius: 10%;
 }
 
 #potoMe{

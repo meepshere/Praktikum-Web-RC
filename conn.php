@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$db="dbmg4";
+$db="dbmg7";
 
 $kon = mysqli_connect($host,$user,$password,$db);
 if(!$kon){

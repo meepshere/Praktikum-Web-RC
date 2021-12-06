@@ -3,7 +3,7 @@ require_once('db/Koneksi.php');
 
 class User
 {
-    var $BASE_URL = "/prak";
+    var $BASE_URL = "/pemwebm8";
     public function __construct()
     {
         $db = new Koneksi();
@@ -17,6 +17,11 @@ class User
 
         if ($auth->num_rows !== 0) {
             //Authentikasi user diterima
+            $user = $auth->fetch_assoc();
+            session_start();
+            $_SESSION['userID'] = $user['id'];
+            $_SESSION['nama'] = $user['nama'];
+
             header("Location: {$this->BASE_URL}/home.php");
         } else {
             header("Location: {$this->BASE_URL}/index.php");

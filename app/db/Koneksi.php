@@ -3,7 +3,7 @@ class Koneksi
 {
     private $dbHost     = "localhost";
     private $dbUser     = "root";
-    private $dbPassword = "alfast12";
+    private $dbPassword = "";
     private $dbName     = "prakweb";
 
     public function connect()
@@ -17,7 +17,7 @@ class Koneksi
             // echo "Gagal terkoneksi ke database : (" . $mysqli->connect_error . ")";
 
             //?prod
-            header('Location: ./../../500.php');
+            header('Location: ./500.php');
         }
 
 

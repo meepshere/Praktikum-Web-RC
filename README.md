@@ -5,11 +5,11 @@ Tugas Minggu 8 :
 Task 1 + Task 2 + Task 3 -> Selesai :-)
 
 Modifikasi praktikan
-(+) Styling halaman
-(+) Penambahan fitur clear history
-(+) Penambahan fitur add content
-(+) Penambahan fitur logout
-(+) Halaman profile praktikan hehehe
+<br>(+) Styling halaman
+<br>(+) Penambahan fitur clear history
+<br>(+) Penambahan fitur add content
+<br>(+) Penambahan fitur logout
+<br>(+) Halaman profile praktikan hehehe
 
 ### Tambahkan identitas dasar di sini: 
 

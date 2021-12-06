@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.navhead{
+    width: 100%;
+    position: fixed;
+}
+
+header{
+    background-color: #eca6a6;
+    display: flex;
+    height: 62px;
+    box-shadow: 0 0 10px black;    
+    align-items: center;
+}   
+
+
+nav{
+    background-color: #f58a8a;
+    display: flex;
+    align-items: center;
+    height: 37px; 
+    box-shadow: 0 5px #9d188b;
+    margin-bottom: 37px;
+}
+
+img{    
+    height: 200px;
+}
+
+body{
+    height: auto;
+    width: auto;
+    background-color:#ffeaea;
+}
+
+.all-contents{
+    display:flex;
+    height: auto;
+    width: 100%;
+}
+
+.main-content{
+    height: 373px;
+    width: 56%;
+    display: flex;
+    margin-top: 95px;
+}
+
+.newss{
+    height: auto;
+    width: 40%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.tengahSendiri{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+footer{
+    position:fixed;
+    bottom: 0;
+    background-color: #f58a8a;
+    margin-top: 20px;
+    width:100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #9d188b;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.berita1{
+    padding-top: 32px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+td{
+    padding-left: 25px;
+}
+
+#bioTitle{
+    padding-left: 25px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img{
+    margin-left: 45px;
+    border-radius: 30%;
+}
+
+#potoMe{
+    box-shadow: 0 6px #f58a8a;
+}
+
+#logoitera{
+    margin: 12px;
+    border-radius: 30%;
+    height: 80%;
+    margin-right: 15px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.link li{
+    display: inline-block
+}
+
+.link a{
+    padding: 0 10px;
+    color: black;
+    font-weight: 1000;
+    font-size: 16px;
+    text-decoration-style:dotted;
+}
+
+#linkPertama{
+    padding-left: 40px;
+}
+
+.link-more{
+    font-size: 16px;
+    color:#9d188b
+}
+
+b{
+    font-size: 24px;
+    padding-left: 6px;
+    font-family: Georgia, serif;
+}

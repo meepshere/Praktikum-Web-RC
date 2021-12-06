@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style2.css">
+    <script type="text/javascript" src="assets/jquery-3.5.1.min.js"></script>
     <title>percobaan m8</title>
     <style>
         * {
@@ -74,11 +76,26 @@
             padding: 10px 20px;
             cursor: pointer;
         }
+        body{
+            background-color: #ebbafa;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <img src="./assets/wave.svg" alt="wave background" class="body-bg"> -->
+    <header>
+        <img src="assets/pic/itera.png" id="logoitera">
+        <b>
+            Institut Teknologi Sumatera
+        </b>
+    </header>
+    
+    <nav>
+        <div class="link">
+            <li><a> &nbsp&nbsp Sayyid Muhammad Umar Al Haris &nbsp&nbsp |  &nbsp&nbsp 119140190 &nbsp&nbsp |  &nbsp&nbsp Pemrograman Web RC</a></li>
+        </div>
+    </nav>
+
     <div class="bucket">
         <p>Login For Continue </p>
         <form action="./login.php" method="post" class="login">
@@ -89,6 +106,9 @@
             <input type="submit" name="login" value="Login" class="login-btn-submit">
         </form>
     </div>
+    <footer> 
+        Sayyid Haris © 2021
+    </footer> 
 </body>
 
 </html>

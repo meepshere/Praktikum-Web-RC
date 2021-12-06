@@ -20,6 +20,8 @@ $posts = $conn->query("SELECT * FROM post")->fetch_all(MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style2.css">
+    <script type="text/javascript" src="assets/jquery-3.5.1.min.js"></script>
     <title>Home</title>
     <style>
         .base {
@@ -89,6 +91,34 @@ $posts = $conn->query("SELECT * FROM post")->fetch_all(MYSQLI_ASSOC);
 </head>
 
 <body>
+    <div class="navhead">
+    <header>
+        <img src="assets/pic/itera.png" id="logoitera">
+        <b>
+            Institut Teknologi Sumatera
+        </b>
+    </header>
+    
+    <nav>
+        <div class="link">
+            <li><a href="javascript:void(0)" id="linkPertama">Home</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="javascript:void(0)" onclick="gonezo()">Add Content</a></li>
+            <li><a href="https://github.com/meepshere/Praktikum-Web-RC/tree/minggu8"  target=”_blank”>GitHub</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </div>
+    </nav>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="buatAdd"></div>
+
     <section class="base">
         <main>
             <?php foreach ($posts as $item) { ?>
@@ -106,12 +136,22 @@ $posts = $conn->query("SELECT * FROM post")->fetch_all(MYSQLI_ASSOC);
         </main>
 
         <aside>
-            <h2>History</h2>
+            <h2>History <a style="color: blue;"onclick="delHistory()"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp( clear )</a></h2>
+            <br>
             <div id="history_buck"></div>
         </aside>
     </section>
 
-    <script src="./assets/iklan/iklan.js"></script>
+    <br>
+    <br>
+    <br>
+    
+    <footer> 
+        Sayyid Haris © 2021
+    </footer> 
+<!-- 
+    <script src="./assets/iklan/iklan.js"></script> -->
+
 
     <script>
         function histRender(){
@@ -163,6 +203,37 @@ $posts = $conn->query("SELECT * FROM post")->fetch_all(MYSQLI_ASSOC);
             histRender()
         }
 
+        function delHistory(){
+            localStorage.clear();
+            const history_buck = document.getElementById('history_buck')
+            history_buck.innerHTML = ''
+        }
+
+        function gonezo(){
+            $.get("/pemwebm8/addContent.php", function(data) {
+                $("#buatAdd").html(data);
+            });
+        }
+
+        // function backHome(){
+        //     $,get("/pemwebm8/index.php", function(data){
+        //         $(*).html(data);
+        //     })
+        // }
+        
+        function tambahKonten(){
+            $.ajax({
+                type: "POST",
+                url: "/pemwebm8/newContent.php",
+                data: $("#form").serialize(),
+                success: function(data) {
+                    location.reload();
+                },
+                error: function() {
+                    alert('error handling here');
+                }
+            });
+        }
     </script>
     
     <?php
